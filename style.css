@@ -1,0 +1,142 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+
+
+
+#someinfo{
+    top: 90px;
+    left: 50px;
+    right: 360px;
+    position: absolute;  
+}
+
+#sidebar {
+    background-color: #e6e6fa;
+    width: 320px;
+    padding: 5px;
+    float: right;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px;
+}
+
+#content {
+        float: center;
+        width: 680px; 
+        padding: 10px; 
+        background: #ffffff; 
+        border-radius: 5px;
+        box-shadow: rgba(0,0,0,0.5) 0px 1px 3px;
+      }
+      
+td {
+    padding: 30px
+}
+
+fieldset.one
+{
+	color: #4b0082;
+	border-color: black;
+	margin-top: 20px;
+	margin-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	padding-right: 15px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	font-weight: bold;
+	clear:both; 
+	text-align:right;
+	line-height:px;
+	background-color: #e6e6fa;
+}
+fieldset.two
+{
+	color: #4b0082;
+	border-color: cyan;
+	margin-top: 20px;
+	margin-right: 4px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	font-weight: normal;
+	clear:both; 
+	line-height:25px;
+	background-color: #e6e6fa;
+}
+label 
+{
+	float:left;
+	padding-right:20px;
+	font-size: 20px;
+
+}
+
+
+legend
+{
+	text-align: right;
+	color: #800080;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+
+legendd
+{
+	text-align: left;
+	color: #800080;
+	font-weight: bold;
+	font-size: 30px;
+}
+
+legends
+{
+	text-align: center;
+	color: #800080;
+	font-weight:600;
+	font-size: 25px;
+}
+
+legenddd
+{
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+legendddd
+{
+	text-align: left;
+	color: #dda0dd;
+	font-weight: bold;
+	font-size: 40px;
+}
+
+input.radio
+{
+	font-weight: normal;
+}
+
+#headerr {
+    float: left;
+    position: relative;
+    height: 150px;
+	width: 972px;
+	max-width: inherit;
+    background-color: #ffffff;
+    background-image: url(restphone.jpg);
+    background-repeat: no-repeat;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
