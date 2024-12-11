@@ -37,12 +37,12 @@ async function getResponce() {
 
 
    content_filter=[]
-    let word=document.getElementById('search').value.toLowerCase();
+    let word=document.getElementById('search').value.toLowerCase().replace(/\s/g, '');
     content_filter= content_price.filter((product) =>{
         return (
-                    product.title.toLowerCase().includes(word) ||
-                    product.description.toLowerCase().includes(word) ||
-                    product.price.toString().includes(word)
+                    product.title.toLowerCase().replace(/\s/g, '').includes(word) ||
+                    product.description.toLowerCase().replace(/\s/g, '').includes(word) ||
+                    product.price.toString().replace(/\s/g, '').includes(word)
                 );
 
     });
@@ -89,12 +89,12 @@ async function getResponce1() {
 
 
     content_filter=[]
-    let word=document.getElementById('search').value.toLowerCase();
+    let word=document.getElementById('search').value.toLowerCase().replace(/\s/g, '');
     content_filter= content_title.filter((product) =>{
         return (
-                    product.title.toLowerCase().includes(word) ||
-                    product.description.toLowerCase().includes(word) ||
-                    product.price.toString().includes(word)
+                    product.title.toLowerCase().replace(/\s/g, '').includes(word) ||
+                    product.description.toLowerCase().replace(/\s/g, '').includes(word) ||
+                    product.price.toString().replace(/\s/g, '').includes(word)
                 );
 
     });
