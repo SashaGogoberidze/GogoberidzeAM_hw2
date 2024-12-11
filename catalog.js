@@ -12,10 +12,6 @@ function sort(){
 
 function search(){
 
-
-
-
-
     if(price.checked){
         document.getElementById('node_for_insert').innerHTML = '';
         getResponce()}
@@ -35,41 +31,24 @@ async function getResponce() {
     console.log(content)
     content = JSON.parse(content)
     content = content.splice(0, 11)
-    //content.sort()
     console.log(content)
     let key
-    /*for (key in content) {
-        console.log(content[key].id, content[key].title)
-        console.log(content[key])
-    }*/
     content_price=content.sort((a, b) => a.price - b.price);
 
-    /*
-     products: []
-     filteredProducts: []
-     const query = this.searchQuery.toLowerCase();
-            this.filteredProducts = this.products.filter(product => {
-                return (
-                    product.title.toLowerCase().includes(query) ||
-                    product.description.toLowerCase().includes(query) ||
-                    product.price.toString().includes(query)
-                );
-            });
-    */
+
    content_filter=[]
-    let word=document.getElementById('search').value.toLowerCase().trim();
+    let word=document.getElementById('search').value.toLowerCase();
     content_filter= content_price.filter((product) =>{
         return (
-                    product.title.toLowerCase().trim().includes(word) ||
-                    product.description.toLowerCase().trim().includes(word) ||
-                    product.price.toString().trim().includes(word)
+                    product.title.toLowerCase().includes(word) ||
+                    product.description.toLowerCase().includes(word) ||
+                    product.price.toString().includes(word)
                 );
 
     });
     console.log(content_filter);
 
     let node_for_insert = document.getElementById("node_for_insert")
-    //node_for_insert.innerHTML='';
     for (key in content_filter) {
                 node_for_insert.innerHTML += `
                 <li style="width: 310px" class="d-flex flex-column m-1 p-1 border bg-body">
@@ -84,24 +63,15 @@ async function getResponce() {
 
 }
 async function getResponce1() {
-   // let responce = await fetch("https://my-json-server.typicode.com/typicode/demo/posts")
-    //let responce = await fetch("https://vmarshirov.github.io/g06u28/030_js/data/0620.json")
-    //let responce = await fetch("http://185.182.111.214:7628/tmp/g06u28.txt_api.json")
-//    let responce = await fetch("shop.json")
     let responce = await fetch("shop.json")
 
     let content = await responce.text()
     console.log(content)
     content = JSON.parse(content)
     content = content.slice(0, 11)
-    //content.sort()
     console.log(content)
     let key
-    /*for (key in content) {
-        console.log(content[key].id, content[key].title)
-        console.log(content[key])
-    }*/
-
+    
     // sort by name
     content_title=content.sort((a, b) => {
     const nameA = a.title.toUpperCase(); // ignore upper and lowercase
@@ -120,7 +90,6 @@ async function getResponce1() {
 
     content_filter=[]
     let word=document.getElementById('search').value.toLowerCase();
-   //let word = 'search'.toLowerCase();
     content_filter= content_title.filter((product) =>{
         return (
                     product.title.toLowerCase().includes(word) ||
@@ -131,7 +100,7 @@ async function getResponce1() {
     });
     console.log(content_filter);
 
-    //node_for_insert.innerHTML='';
+    
     let node_for_insert = document.getElementById("node_for_insert")
     for (key in content_filter) {
                 node_for_insert.innerHTML += `
