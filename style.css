@@ -140,3 +140,14 @@ input.radio
     border-radius: 5px;
 }
 
+.violet {
+	background: #e6e6fa;
+	padding: .75rem 1.25rem;
+	border-radius: 10rem;
+}
+
+.pink {
+	background: #ffc0cb;
+	padding: .75rem 1.25rem;
+	border-radius: 10rem;
+}
