@@ -60,9 +60,9 @@ async function getResponce() {
     let word=document.getElementById('search').value.toLowerCase().trim();
     content_filter= content_price.filter((product) =>{
         return (
-                    product.title.toLowerCase().includes(word) ||
-                    product.description.toLowerCase().includes(word) ||
-                    product.price.toString().includes(word)
+                    product.title.toLowerCase().trim().includes(word) ||
+                    product.description.toLowerCase().trim().includes(word) ||
+                    product.price.toString().trim().includes(word)
                 );
 
     });
